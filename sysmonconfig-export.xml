@@ -1062,6 +1062,13 @@
 		</DnsQuery>
 	</RuleGroup>
 
+	<!--SYSMON EVENT ID 23 : FILE DELETE-->
+	<RuleGroup name="" groupRelation="or">
+		<FileDelete onmatch="exclude">
+			<!--NOTE: Using exclude with no rules means everything will be logged-->
+		</FileDelete>
+	</RuleGroup>
+
 	<!--SYSMON EVENT ID 255 : ERROR-->
 		<!--"This event is generated when an error occurred within Sysmon. They can happen if the system is under heavy load
 			and certain tasked could not be performed or a bug exists in the Sysmon service. You can report any bugs on the
