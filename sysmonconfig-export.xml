@@ -1065,7 +1065,12 @@
 	<!--SYSMON EVENT ID 23 : FILE DELETE-->
 	<RuleGroup name="" groupRelation="or">
 		<FileDelete onmatch="exclude">
-			<!--NOTE: Using exclude with no rules means everything will be logged-->
+			<Image condition="is">C:\Windows\System32\RuntimeBroker.exe</Image>
+			<Image condition="is">C:\Windows\System32\svchost.exe</Image>
+			<Image condition="is">C:\WINDOWS\system32\svchost.exe</Image>
+			<Image condition="is">C:\WINDOWS\system32\ProvTool.exe</Image>
+			<Image condition="is">C:\WINDOWS\system32\taskhostw.exe</Image>
+			<Image condition="is">C:\Program Files (x86)\Google\Chrome\Application\chrome.exe</Image>
 		</FileDelete>
 	</RuleGroup>
 
